@@ -190,7 +190,7 @@ class CRT:
     def create_crt_lines(self):
         line_h = 3
         line_amt = int(screen_h/line_h)
-        for line in line_amt:
+        for line in range(line_amt):
             y_pos = line*line_h
             pygame.draw.line(self.tv, 'black', (0, y_pos), (screen_w, y_pos), 1)
     
@@ -221,7 +221,7 @@ if __name__ == '__main__':
                 
         screen.fill((30,30,30))
         game.run()
-        #crt.draw()
+        crt.draw()
         
         pygame.display.flip()
         clock.tick(60)
